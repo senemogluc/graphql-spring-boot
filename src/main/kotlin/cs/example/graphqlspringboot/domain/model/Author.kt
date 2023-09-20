@@ -1,12 +1,15 @@
 package cs.example.graphqlspringboot.domain.model
 
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.Id
+import jakarta.persistence.*
 
-data class Author(
+@Entity
+@Table(name = "authors")
+open class Author(
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,
-    val firstName: String,
+    @Column(name = "first_name")
+    var firstName: String,
+    @Column(name = "last_name")
     val lastName: String
 )

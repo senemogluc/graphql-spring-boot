@@ -1,10 +1,14 @@
 package cs.example.graphqlspringboot.domain.model
 
-import cs.example.graphqlspringboot.domain.model.Author
+import jakarta.persistence.*
 
-data class Book(
+@Entity
+@Table(name = "books")
+open class Book(
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,
     val name: String,
+    @Column(name = "page_count")
     val pageCount: Int,
-    val author: Author
 )
