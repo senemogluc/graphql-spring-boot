@@ -1,6 +1,6 @@
 package cs.example.graphqlspringboot.domain.dto.response
 
-data class AuthorResponse(
+data class CreateAuthorResponse(
     var firstName: String,
-    val lastName: String
+    var lastName: String
 )

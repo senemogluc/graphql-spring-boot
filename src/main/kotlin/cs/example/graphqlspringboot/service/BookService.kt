@@ -1,8 +1,10 @@
 package cs.example.graphqlspringboot.service
 
+import cs.example.graphqlspringboot.domain.model.Author
 import cs.example.graphqlspringboot.domain.model.Book
 import cs.example.graphqlspringboot.repository.BookRepository
 import org.springframework.stereotype.Service
+import java.util.*
 
 @Service
 class BookService(private val bookRepository: BookRepository) {
@@ -11,4 +13,15 @@ class BookService(private val bookRepository: BookRepository) {
         return bookRepository.save(book)
     }
 
+    fun getAll(): List<Book>{
+        return bookRepository.findAll()
+    }
+
+    fun findById(id: Int): Optional<Book> {
+        return bookRepository.findById(id)
+    }
+
+    fun deleteById(id: Int){
+        return bookRepository.deleteById(id)
+    }
 }

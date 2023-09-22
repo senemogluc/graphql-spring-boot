@@ -12,12 +12,12 @@ import java.util.*
 class AuthorQuery(private val authorService: AuthorService){
 
     @GraphQLQuery
-    fun getAllAuthors(): List<Author>{
+    fun authors(): List<Author>{
         return authorService.getAll()
     }
     
     @GraphQLQuery
-    fun authorById(id: Int): Optional<Author> {
+    fun author(id: Int): Optional<Author> {
         return authorService.findById(id)
     }
 }

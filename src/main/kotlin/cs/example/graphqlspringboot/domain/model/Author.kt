@@ -11,5 +11,5 @@ open class Author(
     @Column(name = "first_name")
     var firstName: String,
     @Column(name = "last_name")
-    val lastName: String
+    var lastName: String
 )

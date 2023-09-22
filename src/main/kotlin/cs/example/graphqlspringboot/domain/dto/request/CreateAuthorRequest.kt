@@ -1,6 +1,6 @@
 package cs.example.graphqlspringboot.domain.dto.request
 
-data class AuthorRequest(
+data class CreateAuthorRequest(
     var firstName: String,
-    val lastName: String
+    var lastName: String
 )

@@ -20,4 +20,7 @@ class AuthorService(private val authorRepository: AuthorRepository) {
         return authorRepository.findById(id)
     }
 
+    fun deleteById(id: Int){
+        return authorRepository.deleteById(id)
+    }
 }
