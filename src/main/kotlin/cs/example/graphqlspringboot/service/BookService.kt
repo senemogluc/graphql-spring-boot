@@ -1,6 +1,5 @@
 package cs.example.graphqlspringboot.service
 
-import cs.example.graphqlspringboot.domain.model.Author
 import cs.example.graphqlspringboot.domain.model.Book
 import cs.example.graphqlspringboot.repository.BookRepository
 import org.springframework.stereotype.Service
