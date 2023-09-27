@@ -1,7 +1,6 @@
 package cs.example.graphqlspringboot.domain.model
 
 import jakarta.persistence.*
-import java.util.UUID
 
 @Entity
 @Table(name = "books")
